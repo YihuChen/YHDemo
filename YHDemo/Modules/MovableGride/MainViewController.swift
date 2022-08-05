@@ -21,6 +21,18 @@ class MainViewController: UIViewController {
             make.width.height.equalTo(100)
             make.center.equalToSuperview()
         }
+        
+        let content = R.string.localizable.localize_test()
+        let label = UILabel()
+        view.addSubview(label)
+        label.text = content
+        label.textColor = .red
+        label.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(imgView.snp.bottom).offset(10)
+        }
+        print("content : \(content)")
+        
         // Do any additional setup after loading the view.
     }
     
