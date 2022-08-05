@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
             make.center.equalToSuperview()
         }
         
-        let content = R.string.localizable.localize_test()
+        let content = R.string.localizable.localizeTest()
         let label = UILabel()
         view.addSubview(label)
         label.text = content
