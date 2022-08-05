@@ -6,13 +6,21 @@
 //
 
 import UIKit
+import SnapKit
 
 class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        
+        let imgView = UIImageView.init(image: R.image.my_avatar())
+        view.addSubview(imgView)
+        imgView.snp.makeConstraints { make in
+            make.width.height.equalTo(100)
+            make.center.equalToSuperview()
+        }
         // Do any additional setup after loading the view.
     }
     

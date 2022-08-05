@@ -7,7 +7,7 @@ target 'YHDemo' do
 
   # Pods for YHDemo
 #UI
-# pod 'Hero'
+ pod 'Hero'
 
 #Layout
 pod 'SnapKit'
