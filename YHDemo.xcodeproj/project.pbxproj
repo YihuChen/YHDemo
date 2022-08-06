@@ -16,6 +16,18 @@
 		067C717E289D1C700002F5D6 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C717D289D1C700002F5D6 /* R.generated.swift */; };
 		067C7181289D1F280002F5D6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 067C7183289D1F280002F5D6 /* Localizable.strings */; };
 		067C7188289D20850002F5D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 067C718A289D20850002F5D6 /* InfoPlist.strings */; };
+		067C718E289D29FD0002F5D6 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C718D289D29FD0002F5D6 /* Configs.swift */; };
+		067C7193289D6B770002F5D6 /* YHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C7192289D6B770002F5D6 /* YHCollectionViewCell.swift */; };
+		067C7195289D70A10002F5D6 /* YHCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C7194289D70A10002F5D6 /* YHCollectionView.swift */; };
+		067C7197289D735E0002F5D6 /* YHViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C7196289D735E0002F5D6 /* YHViewProtocol.swift */; };
+		067C7199289D78690002F5D6 /* ReuseIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C7198289D78690002F5D6 /* ReuseIdentifiers.swift */; };
+		067C719D289D7D340002F5D6 /* YHTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C719C289D7D340002F5D6 /* YHTableView.swift */; };
+		067C719F289D7D4C0002F5D6 /* YHTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C719E289D7D4C0002F5D6 /* YHTableViewCell.swift */; };
+		067C71A4289D7F8B0002F5D6 /* UIColor+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71A3289D7F8B0002F5D6 /* UIColor+YHKit.swift */; };
+		067C71A6289D7FAF0002F5D6 /* UIFont+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71A5289D7FAF0002F5D6 /* UIFont+YHKit.swift */; };
+		067C71A8289D80140002F5D6 /* UILabel+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71A7289D80140002F5D6 /* UILabel+YHKit.swift */; };
+		067C71AA289D81AD0002F5D6 /* UIImage+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71A9289D81AD0002F5D6 /* UIImage+YHKit.swift */; };
+		067C71AC289E37340002F5D6 /* String+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71AB289E37340002F5D6 /* String+YHKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +44,18 @@
 		067C7185289D1FC90002F5D6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		067C7189289D20850002F5D6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		067C718B289D20870002F5D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		067C718D289D29FD0002F5D6 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		067C7192289D6B770002F5D6 /* YHCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHCollectionViewCell.swift; sourceTree = "<group>"; };
+		067C7194289D70A10002F5D6 /* YHCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHCollectionView.swift; sourceTree = "<group>"; };
+		067C7196289D735E0002F5D6 /* YHViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHViewProtocol.swift; sourceTree = "<group>"; };
+		067C7198289D78690002F5D6 /* ReuseIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifiers.swift; sourceTree = "<group>"; };
+		067C719C289D7D340002F5D6 /* YHTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableView.swift; sourceTree = "<group>"; };
+		067C719E289D7D4C0002F5D6 /* YHTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHTableViewCell.swift; sourceTree = "<group>"; };
+		067C71A3289D7F8B0002F5D6 /* UIColor+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+YHKit.swift"; sourceTree = "<group>"; };
+		067C71A5289D7FAF0002F5D6 /* UIFont+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+YHKit.swift"; sourceTree = "<group>"; };
+		067C71A7289D80140002F5D6 /* UILabel+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+YHKit.swift"; sourceTree = "<group>"; };
+		067C71A9289D81AD0002F5D6 /* UIImage+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+YHKit.swift"; sourceTree = "<group>"; };
+		067C71AB289E37340002F5D6 /* String+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+YHKit.swift"; sourceTree = "<group>"; };
 		1DCFDD2BFE0CFBBF6F795E76 /* Pods_YHDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2FE0475B142CFFB51B0E9E /* Pods-YHDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDemo.release.xcconfig"; path = "Target Support Files/Pods-YHDemo/Pods-YHDemo.release.xcconfig"; sourceTree = "<group>"; };
 		831958D8DBADFE560C6626E0 /* Pods-YHDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDemo.debug.xcconfig"; path = "Target Support Files/Pods-YHDemo/Pods-YHDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				067C7174289D0A340002F5D6 /* Application */,
+				067C718F289D69460002F5D6 /* Common */,
+				067C71A0289D7EF80002F5D6 /* Extensions */,
 				067C7176289D0ABB0002F5D6 /* Modules */,
+				067C718C289D29DA0002F5D6 /* Configs */,
 				067C7175289D0A530002F5D6 /* Resource */,
 			);
 			path = YHDemo;
@@ -122,6 +149,39 @@
 				067C7178289D0B160002F5D6 /* MainViewController.swift */,
 			);
 			path = MovableGride;
+			sourceTree = "<group>";
+		};
+		067C718C289D29DA0002F5D6 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				067C718D289D29FD0002F5D6 /* Configs.swift */,
+				067C7198289D78690002F5D6 /* ReuseIdentifiers.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		067C718F289D69460002F5D6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				067C7196289D735E0002F5D6 /* YHViewProtocol.swift */,
+				067C7192289D6B770002F5D6 /* YHCollectionViewCell.swift */,
+				067C7194289D70A10002F5D6 /* YHCollectionView.swift */,
+				067C719E289D7D4C0002F5D6 /* YHTableViewCell.swift */,
+				067C719C289D7D340002F5D6 /* YHTableView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		067C71A0289D7EF80002F5D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				067C71A3289D7F8B0002F5D6 /* UIColor+YHKit.swift */,
+				067C71A5289D7FAF0002F5D6 /* UIFont+YHKit.swift */,
+				067C71A7289D80140002F5D6 /* UILabel+YHKit.swift */,
+				067C71A9289D81AD0002F5D6 /* UIImage+YHKit.swift */,
+				067C71AB289E37340002F5D6 /* String+YHKit.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F980FFE92039A785FEB8CD1B /* Frameworks */ = {
@@ -272,8 +332,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				067C7179289D0B160002F5D6 /* MainViewController.swift in Sources */,
+				067C7193289D6B770002F5D6 /* YHCollectionViewCell.swift in Sources */,
+				067C719D289D7D340002F5D6 /* YHTableView.swift in Sources */,
+				067C718E289D29FD0002F5D6 /* Configs.swift in Sources */,
 				067C7161289D09860002F5D6 /* AppDelegate.swift in Sources */,
+				067C7197289D735E0002F5D6 /* YHViewProtocol.swift in Sources */,
+				067C71AC289E37340002F5D6 /* String+YHKit.swift in Sources */,
+				067C71A4289D7F8B0002F5D6 /* UIColor+YHKit.swift in Sources */,
+				067C719F289D7D4C0002F5D6 /* YHTableViewCell.swift in Sources */,
+				067C7195289D70A10002F5D6 /* YHCollectionView.swift in Sources */,
+				067C71A6289D7FAF0002F5D6 /* UIFont+YHKit.swift in Sources */,
+				067C7199289D78690002F5D6 /* ReuseIdentifiers.swift in Sources */,
+				067C71A8289D80140002F5D6 /* UILabel+YHKit.swift in Sources */,
 				067C717E289D1C700002F5D6 /* R.generated.swift in Sources */,
+				067C71AA289D81AD0002F5D6 /* UIImage+YHKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
