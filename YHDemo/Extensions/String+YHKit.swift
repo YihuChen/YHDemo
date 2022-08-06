@@ -52,7 +52,7 @@ extension String {
         return self[from..<self.count]
     }
     
-    func getMd5() -> String {
+    func encryptByMD5() -> String {
         let cCharArray = self.cString(using: .utf8)
         var uint8Array = [UInt8](repeating: 0, count: Int(CC_MD5_DIGEST_LENGTH))
         CC_MD5(cCharArray, CC_LONG(cCharArray!.count - 1), &uint8Array)
@@ -60,9 +60,11 @@ extension String {
     }
     
     func toArray() -> [Any] {
-        Array
-        Dictionary
-        return convertToCollection<[Any]>() ?? []
+        return convertToCollection() ?? []
+    }
+    
+    func toDictionary() -> [String: Any] {
+        return convertToCollection() ?? [:]
     }
     
     private func convertToCollection<T>() -> T? {
@@ -75,25 +77,5 @@ extension String {
         }
         return nil
     }
-    func convertJSONStringToDictionary() -> [String : Any] {
-        if let data = self.data(using: String.Encoding.utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions.init(rawValue: 0)]) as! [String : Any]
-            } catch let error as NSError {
-                 print(error)
-            }
-        }
-        return [:]
-    }
-    
-    func convertJSONStringToArray() -> [Any] {
-        if let data = self.data(using: String.Encoding.utf8) {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: [JSONSerialization.ReadingOptions.init(rawValue: 0)]) as! [Any]
-            } catch let error as NSError {
-                 print(error)
-            }
-        }
-        return []
-    }
+
 }
