@@ -20,7 +20,7 @@ class MovableGrideController: YHViewController {
     }
     
     override func makeUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         view.addSubview(collectionView)
         

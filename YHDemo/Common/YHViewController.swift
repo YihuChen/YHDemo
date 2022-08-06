@@ -18,6 +18,10 @@ class YHViewController: UIViewController, YHControllerProtocol {
         // Do any additional setup after loading the view.
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .darkContent
+    }
+    
     func initConfig() { }
     
     func makeUI() { }

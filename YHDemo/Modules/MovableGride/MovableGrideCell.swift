@@ -9,14 +9,14 @@ import UIKit
 
 class MovableGrideCell: YHCollectionViewCell {
     lazy var titleLabel: UILabel = {
-        let label = UILabel.init(text: "", textColor: UIColor.black, font: R.font.shetumodengxiaofangti(size: 24)!)
+        let label = UILabel.init(text: "", textColor: UIColor.white, font: R.font.sfProRoundedMedium(size: 30)!)
         return label
     }()
     
     override func makeUI() {
         super.makeUI()
         
-        contentView.backgroundColor = .red
+        contentView.backgroundColor = .hexColor(withRgb: "#87CEFA")
         contentView.layer.cornerRadius = BaseDimensions.cornerRadius * 2
         contentView.addSubview(titleLabel)
         
