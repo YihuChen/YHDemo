@@ -14,6 +14,14 @@ class YHCollectionViewCell: UICollectionViewCell, YHViewProtocol {
         makeUI()
     }
     
+    func makeUI() {
+        backgroundColor = .clear
+        contentView.backgroundColor = .white
+    }
+    
+    func loadData(with dataModel: Any) {
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

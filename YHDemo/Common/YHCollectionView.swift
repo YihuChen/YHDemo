@@ -15,16 +15,20 @@ class YHCollectionView: UICollectionView, UICollectionViewDataSource, UICollecti
         dataSource = self
         delegate = self
         backgroundColor = .clear
-        register(YHCollectionViewCell.self, forCellWithReuseIdentifier: ReuseIdentifiers.YHCollectionViewCell)
         
+        loadCollectionViewRegisterInfo()
     }
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
     }
     
-    func flowLayout() -> UICollectionViewFlowLayout {
-        return UICollectionViewFlowLayout();
+    func dataArray(for section: Int) -> [Any] {
+        return dataArray[section]
+    }
+    
+    func loadCollectionViewRegisterInfo() {
+        register(YHCollectionViewCell.self, forCellWithReuseIdentifier: ReuseIdentifiers.YHCollectionViewCell)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

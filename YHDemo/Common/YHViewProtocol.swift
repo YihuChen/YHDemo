@@ -8,22 +8,20 @@
 import Foundation
 import UIKit
 
-protocol YHViewProtocol {
+protocol YHRevealProtocol {
     func makeUI()
-    func updateUI()
+}
+
+protocol YHViewProtocol: YHRevealProtocol {
     func loadData(with dataModel: Any)
 }
 
+protocol YHControllerProtocol: YHRevealProtocol {
+    func initConfig()
+    func fetchData()
+}
+
 extension YHViewProtocol where Self: UIView {
-    func makeUI() {
-        //...
-        //create views and set layouts
-        updateUI()
-    }
-    func updateUI() {
-        setNeedsDisplay()
-    }
-    func loadData(with dataModel: Any) {
-        //show date
-    }
+    func makeUI() { } 
+    func loadData(with dataModel: Any) { }
 }

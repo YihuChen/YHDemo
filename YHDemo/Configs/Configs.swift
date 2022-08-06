@@ -9,6 +9,17 @@ import Foundation
 import UIKit
 
 struct BaseDimensions {
+    static var screenWidth: CGFloat  {
+        get {
+            return UIScreen.main.bounds.width
+        }
+    }
+    static var screenHeight: CGFloat {
+        get {
+            return UIScreen.main.bounds.height
+        }
+    }
+    
     static let inset: CGFloat = 8
     static let tabBarHeight: CGFloat = 58
     static let toolBarHeight: CGFloat = 66

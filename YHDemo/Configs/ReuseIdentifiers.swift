@@ -9,6 +9,7 @@ import Foundation
 
 struct ReuseIdentifiers {
     static let YHCollectionViewCell = "YHCollectionViewCell"
+    static let MovableGrideCell = "MovableGrideCell"
     
     static let YHTableViewCell = "YHTableViewCell"
 }
