@@ -20,6 +20,8 @@ struct BaseDimensions {
         }
     }
     
+    static let animDuration: CGFloat = 0.25
+    
     static let inset: CGFloat = 8
     static let tabBarHeight: CGFloat = 58
     static let toolBarHeight: CGFloat = 66
