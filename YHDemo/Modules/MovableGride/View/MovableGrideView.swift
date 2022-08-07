@@ -12,10 +12,10 @@ class MovableGrideView: YHCollectionView, UICollectionViewDataSource, UICollecti
     private var itemDataArray: [String] = []
     
     //移动相关的属性
-    private var orginIndexPath: IndexPath?
     private var moveSnapCell: UICollectionViewCell?
     private var lastPoint: CGPoint?
-    
+    private var orginIndexPath: IndexPath?
+    private var moveIndexPath: IndexPath?
     
     override func initConfig() {
         super.initConfig()
@@ -39,33 +39,24 @@ class MovableGrideView: YHCollectionView, UICollectionViewDataSource, UICollecti
     
     //MARK: - 长按手势
     @objc private func handleLongPressGes(ges: UILongPressGestureRecognizer) {
+        let currentPoint = ges.location(in: self)
         switch ges.state {
         case .began:
-            let currentPoint = ges.location(in: self)
-            guard let currentIndex = indexPathForItem(at: currentPoint) else {
-                return
-            }
-            print("beginInteractiveMovementForItem \(currentIndex)")
-            beginInteractiveMovementForItem(at: currentIndex)
+            guard let currentIndex = indexPathForItem(at: currentPoint) else { return }
+            moveGestureDidBegin(atIndexPath: currentIndex, point: currentPoint)
         case .changed:
-            let currentPoint = ges.location(in: ges.view)
-            updateInteractiveMovementTargetPosition(currentPoint)
-            print("updateInteractiveMovementTargetPosition \(currentPoint)")
+            moveGestureDidChange(atPoint: currentPoint)
         case .ended:
-            endInteractiveMovement()
-            print("endInteractiveMovement")
+            moveGestureDidEnd()
         default:
-            cancelInteractiveMovement()
-            print("cancelInteractiveMovement")
+            moveGestureDidEnd()
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        
-    }
-    
     private func moveGestureDidBegin(atIndexPath indexPath: IndexPath, point: CGPoint) {
-        guard indexPath.section != 0 else { return }
+        guard indexPath.section == 0 else { return }
+        YHFeedback.occurred(.light)     //震动反馈
+        
         orginIndexPath = indexPath
         lastPoint = point
         
@@ -75,6 +66,7 @@ class MovableGrideView: YHCollectionView, UICollectionViewDataSource, UICollecti
         moveSnapCell = MovableGrideCell.init(frame: cell.frame)
         moveSnapCell?.alpha = 0
         moveSnapCell?.center = point
+        moveSnapCell?.revealShadowLayer()
         (moveSnapCell as? MovableGrideCell)?.loadData(with: dataModel)
         
         addSubview(moveSnapCell!)
@@ -85,6 +77,32 @@ class MovableGrideView: YHCollectionView, UICollectionViewDataSource, UICollecti
         } completion: { _ in
             cell.isHidden = true
         }
+    }
+    
+    private func moveGestureDidChange(atPoint point: CGPoint) {
+        if orginIndexPath == nil { return }
+        
+        moveSnapCell?.center = point
+        //TODO 计算大小
+    }
+    
+    private func moveGestureDidEnd() {
+        if orginIndexPath == nil { return }
+        
+        let cell = cellForItem(at: orginIndexPath!)
+        cell?.isHidden = false
+        UIView.animate(withDuration: BaseDimensions.animDuration) {
+            self.moveSnapCell?.alpha = 0
+            cell?.alpha = 1
+        } completion: { _ in
+            self.moveSnapCell?.removeFromSuperview()
+            self.moveSnapCell = nil
+            self.orginIndexPath = nil
+            self.lastPoint = nil
+            
+            self.reloadData()
+        }
+
     }
     
     // MARK: - Collection delegate
@@ -116,4 +134,23 @@ class MovableGrideView: YHCollectionView, UICollectionViewDataSource, UICollecti
         return cell
     }
 
+//    @objc private func handleLongPressGes(ges: UILongPressGestureRecognizer) {
+//        let currentPoint = ges.location(in: self)
+//        switch ges.state {
+//        case .began:
+//            guard let currentIndex = indexPathForItem(at: currentPoint) else { return }
+//            beginInteractiveMovementForItem(at: currentIndex)
+//        case .changed:
+//            updateInteractiveMovementTargetPosition(currentPoint)
+//        case .ended:
+//            endInteractiveMovement()
+//        default:
+//            cancelInteractiveMovement()
+//        }
+//    }
+//
+//    //要用系统移动的API的话 一定要实现这个方法 不然移动会失效
+//    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//
+//    }
 }

@@ -37,6 +37,8 @@
 		067C71BC289E6A420002F5D6 /* modengfang.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 067C71BA289E6A420002F5D6 /* modengfang.ttf */; };
 		067C71BD289E6A420002F5D6 /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 067C71BB289E6A420002F5D6 /* SF-Pro-Rounded-Medium.otf */; };
 		067C71C6289F8C9B0002F5D6 /* MovableDimensionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71C5289F8C9B0002F5D6 /* MovableDimensionManager.swift */; };
+		067C71C8289FB3330002F5D6 /* YHFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71C7289FB3330002F5D6 /* YHFeedback.swift */; };
+		067C71CA289FB6B90002F5D6 /* UIView+YHKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067C71C9289FB6B90002F5D6 /* UIView+YHKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +77,8 @@
 		067C71BB289E6A420002F5D6 /* SF-Pro-Rounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Medium.otf"; sourceTree = "<group>"; };
 		067C71C1289E74370002F5D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		067C71C5289F8C9B0002F5D6 /* MovableDimensionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovableDimensionManager.swift; sourceTree = "<group>"; };
+		067C71C7289FB3330002F5D6 /* YHFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YHFeedback.swift; sourceTree = "<group>"; };
+		067C71C9289FB6B90002F5D6 /* UIView+YHKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+YHKit.swift"; sourceTree = "<group>"; };
 		1DCFDD2BFE0CFBBF6F795E76 /* Pods_YHDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B2FE0475B142CFFB51B0E9E /* Pods-YHDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDemo.release.xcconfig"; path = "Target Support Files/Pods-YHDemo/Pods-YHDemo.release.xcconfig"; sourceTree = "<group>"; };
 		831958D8DBADFE560C6626E0 /* Pods-YHDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YHDemo.debug.xcconfig"; path = "Target Support Files/Pods-YHDemo/Pods-YHDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				067C719E289D7D4C0002F5D6 /* YHTableViewCell.swift */,
 				067C719C289D7D340002F5D6 /* YHTableView.swift */,
 				067C71B7289E5D400002F5D6 /* YHViewController.swift */,
+				067C71C7289FB3330002F5D6 /* YHFeedback.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				067C71AB289E37340002F5D6 /* String+YHKit.swift */,
 				067C71AD289E40DC0002F5D6 /* Collection+YHKit.swift */,
 				067C71AF289E42130002F5D6 /* UIButton+YHKit.swift */,
+				067C71C9289FB6B90002F5D6 /* UIView+YHKit.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 			files = (
 				067C71B6289E5A400002F5D6 /* MovableModel.swift in Sources */,
 				067C71B2289E4B7E0002F5D6 /* MovableGrideCell.swift in Sources */,
+				067C71CA289FB6B90002F5D6 /* UIView+YHKit.swift in Sources */,
 				067C7179289D0B160002F5D6 /* MovableGrideController.swift in Sources */,
 				067C7193289D6B770002F5D6 /* YHCollectionViewCell.swift in Sources */,
 				067C71B0289E42130002F5D6 /* UIButton+YHKit.swift in Sources */,
@@ -430,6 +437,7 @@
 				067C717E289D1C700002F5D6 /* R.generated.swift in Sources */,
 				067C71AA289D81AD0002F5D6 /* UIImage+YHKit.swift in Sources */,
 				067C71B4289E4FF10002F5D6 /* MovableGrideView.swift in Sources */,
+				067C71C8289FB3330002F5D6 /* YHFeedback.swift in Sources */,
 				067C71AE289E40DC0002F5D6 /* Collection+YHKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
