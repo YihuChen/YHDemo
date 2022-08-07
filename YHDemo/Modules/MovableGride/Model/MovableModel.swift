@@ -8,5 +8,8 @@
 import Foundation
 
 struct MovableCollectionModel {
-    var dataArray: [String] = []
+    var itemDataArray: [String] = []
+    var itemSizeDeses: [MovableItemWidthDescription] = []
 }
+
+

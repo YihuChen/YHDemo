@@ -9,9 +9,7 @@ import UIKit
 import SnapKit
 
 class MovableGrideController: YHViewController {
-    lazy var collectionView: MovableCollectionView = {
-        return MovableCollectionView()
-    }()
+    lazy var collectionView: MovableGrideView = MovableGrideView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +28,10 @@ class MovableGrideController: YHViewController {
     }
     
     override func fetchData() {
-        let model = MovableCollectionModel.init(dataArray: ["1", "2", "3", "4", "5", "6", "7", "8", "9"])
+        let model = MovableCollectionModel.init(
+            itemDataArray: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+            itemSizeDeses: [.half, .half, .full, .full, .half, .half, .half, .half, .full, .full]
+        )
         collectionView.loadData(with: model)
     }
 

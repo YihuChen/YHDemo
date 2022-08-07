@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol YHRevealProtocol {
+    func initConfig()
     func makeUI()
 }
 
@@ -17,11 +18,11 @@ protocol YHViewProtocol: YHRevealProtocol {
 }
 
 protocol YHControllerProtocol: YHRevealProtocol {
-    func initConfig()
     func fetchData()
 }
 
 extension YHViewProtocol where Self: UIView {
+    func initConfig() { }
     func makeUI() { } 
     func loadData(with dataModel: Any) { }
 }
